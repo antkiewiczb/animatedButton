@@ -117,3 +117,38 @@ button::after {
 .button-three:hover {
 	box-shadow: 2px 3px 0 20px rgba(255, 255, 255, 0.7), inset 11px 20px 10px rgba(0, 0, 0, 0.4);
 }
+
+.button-four {
+	border-radius: 0;
+	overflow: visible;
+	transition: 0.8s;
+}
+
+.button-four::before,
+.button-four::after {
+	width: 30%;
+	height: 60%;
+}
+.button-four::before {
+	top: 0;
+	left: 0;
+}
+.button-four::after {
+	bottom: 0;
+	right: 0;
+}
+.button-four:hover:after {
+	bottom: -10px;
+	right: -10px;
+	border-bottom: 2px solid rgb(255, 215, 0);
+	border-right: 2px solid rgb(255, 215, 0);
+}
+.button-four:hover::before {
+	top: -10px;
+	left: -10px;
+	border-top: 2px solid rgb(255, 215, 0);
+	border-left: 2px solid rgb(255, 215, 0);
+}
+.button-four:hover {
+	border: none;
+}
