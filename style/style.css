@@ -11,7 +11,8 @@ body {
 	flex-wrap: wrap;
 	height: 100vh;
 	font-family: 'Ubuntu', sans-serif;
-	background: #000;
+	/* background: #000; */
+	background: #333;
 	overflow: hidden;
 }
 
@@ -80,4 +81,39 @@ button::after {
 }
 .button-one:hover .span-button-two {
 	left: 50%;
+}
+
+.button-two::before,
+.button-two::after {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255, 215, 0);
+}
+.button-two::before {
+	top: -50%;
+	left: -100%;
+}
+.button-two::after {
+	bottom: -50%;
+	right: -100%;
+}
+
+.button-two:hover::before {
+	left: 0;
+}
+.button-two:hover::after {
+	right: 0;
+}
+
+.button-three {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: rgb(196, 23, 23);
+	border: none;
+	transition: 0.5s;
+}
+
+.button-three:hover {
+	box-shadow: 2px 3px 0 20px rgba(255, 255, 255, 0.7), inset 11px 20px 10px rgba(0, 0, 0, 0.4);
 }
