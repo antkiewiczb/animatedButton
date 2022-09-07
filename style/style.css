@@ -37,3 +37,47 @@ button::after {
 	transition: 0.4s;
 	z-index: -1;
 }
+
+.button-one {
+	width: 270px;
+	height: 95px;
+}
+.button-one::after {
+	height: 100%;
+	top: 0;
+	left: -10px;
+	border: 2px solid rgb(255, 215, 0);
+}
+.button-one::before {
+	width: 100%;
+	top: -10px;
+	left: 0px;
+	border: 2px solid rgb(255, 215, 0);
+	transition-delay: 0.1s;
+}
+.button-one:hover::after {
+	left: 300px;
+}
+.button-one:hover::before {
+	top: 100px;
+}
+.span-button-one,
+.span-button-two {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.span-button-one {
+	left: 50%;
+	transition: left 0.3s;
+}
+.span-button-two {
+	left: -50%;
+	transition: left 0.3s 0.1s;
+}
+.button-one:hover .span-button-one {
+	left: 120%;
+}
+.button-one:hover .span-button-two {
+	left: 50%;
+}
